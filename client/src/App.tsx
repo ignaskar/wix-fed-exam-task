@@ -1,4 +1,5 @@
 import React from 'react';
+import Search from './components/Search'
 import './App.scss';
 import {createApiClient, Ticket} from './api';
 
@@ -31,6 +32,7 @@ export class App extends React.PureComponent<{}, AppState> {
 
 		return (<ul className='tickets'>
 			{filteredTickets.map((ticket) => (<li key={ticket.id} className='ticket'>
+				<button className="btn btn-hide">hide</button>
 				<h5 className='title'>{ticket.title}</h5>
 				<p className="ticket-content">
 					{ticket.content}
@@ -58,9 +60,9 @@ export class App extends React.PureComponent<{}, AppState> {
 
 		return (<main>
 			<h1>Tickets List</h1>
-			<header>
-				<input type="search" placeholder="Search..." onChange={(e) => this.onSearch(e.target.value)}/>
-			</header>
+
+			<Search onSearch={this.onSearch}/>
+
 			{tickets ? <div className='results'>Showing {tickets.length} results</div> : null }	
 			{tickets ? this.renderTickets(tickets) : <h2>Loading..</h2>}
 		</main>)
