@@ -47,10 +47,25 @@ body {
 		opacity: 0;
 	}
 
-	.results {
+	.btn-restore {
+		color: #3899ec;
+		background: none;
+		font-size: .75rem;
+		font-style: italic;
+		margin: 0 0 3px 0;
+		padding: .2em .2em;
+		width: 3%;
+	}
+
+	.results, .hidden-results {
 		color: #7a92a5;
 		font-size: 12px;
 		margin: 12px 5px;
+	}
+
+	.hidden-results {
+		font-style: italic;
+		margin: 5px 0px;
 	}
 
 	header {

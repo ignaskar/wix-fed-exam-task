@@ -10,6 +10,7 @@ const App = () => {
 
 	const [search, setSearch] = useState<string>('');
 	const [tickets, setTickets] = useState<Ticket[]>([]);
+	const [idsToHide, setIdsToHide] = useState<string[]>([]);
 
 	useEffect(() => {
 		const fetchTicketsAsync = async () => {
@@ -26,7 +27,7 @@ const App = () => {
 		<main>
 			<h1>Tickets List</h1>
 			<Search setSearch={setSearch} />
-			<TicketList tickets={tickets} search={search} />
+			<TicketList tickets={tickets} search={search} idsToHide={idsToHide} setIdsToHide={setIdsToHide} />
 		</main>
 	)
 }
