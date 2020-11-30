@@ -1,6 +1,6 @@
-import React, {SetStateAction, useState} from 'react';
-import {Ticket} from "../api";
-import LabelList from "./LabelList";
+import React, { SetStateAction, useState } from 'react';
+import { Ticket } from '../api';
+import LabelList from './LabelList';
 import Truncate from 'react-truncate';
 
 interface ITicketProps {
@@ -9,7 +9,7 @@ interface ITicketProps {
     setIdsToHide: React.Dispatch<SetStateAction<string[]>>;
 }
 
-const TicketListItem = ({ticket, idsToHide, setIdsToHide}: ITicketProps) => {
+const TicketListItem = ({ ticket, idsToHide, setIdsToHide }: ITicketProps) => {
 
     const [truncated, setTruncated] = useState<boolean>(false);
     const [expanded, setExpanded] = useState<boolean>(false);
@@ -21,38 +21,44 @@ const TicketListItem = ({ticket, idsToHide, setIdsToHide}: ITicketProps) => {
     };
 
     const toggleLines = (e: any) => {
-        e.preventDefault()
+        e.preventDefault();
         setExpanded(!expanded);
-    }
+    };
 
     const hideTicket = (ticket: Ticket) => {
         setIdsToHide([...idsToHide, ticket.id]);
-    }
+    };
 
     return (
         <li className="ticket">
             <button className="btn btn-hide" onClick={() => hideTicket(ticket)}>hide</button>
-            <h5 className='title'>{ticket.title}</h5>
+            <h5 className="title">{ticket.title}</h5>
             <p className="ticket-content">
                 <Truncate
                     lines={!expanded && 3}
                     ellipsis={(
-                        <span> <button className="btn-show-more" onClick={(e) => toggleLines(e)}>Show More</button></span>
+                        <span>
+                            <button className="btn-show-more"
+                                    onClick={(e) => toggleLines(e)}>Show More</button>
+                        </span>
                     )}
                     onTruncate={() => handleTruncate(false)}
                 >
                     {ticket.content}
                 </Truncate>
                 {!truncated && expanded && (
-                    <span> <button className="btn-show-more" onClick={(e) => toggleLines(e)}>Show Less</button></span>
+                    <span>
+                        <button className="btn-show-more" onClick={(e) => toggleLines(e)}>Show Less</button>
+                    </span>
                 )}
             </p>
             <footer>
-                <div className='meta-data'>By {ticket.userEmail} | { new Date(ticket.creationTime).toLocaleString()}</div>
+                <div
+                    className="meta-data">By {ticket.userEmail} | {new Date(ticket.creationTime).toLocaleString()}</div>
                 {ticket.labels ? <LabelList labels={ticket.labels} /> : null}
             </footer>
         </li>
-    )
-}
+    );
+};
 
 export default TicketListItem;
