@@ -4,11 +4,6 @@ import TicketList from './components/TicketList';
 import './App.scss';
 import {createApiClient, Ticket} from './api';
 
-export type AppState = {
-	tickets?: Ticket[],
-	search: string;
-}
-
 const api = createApiClient();
 
 const App = () => {
