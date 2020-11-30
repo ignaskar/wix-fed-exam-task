@@ -147,9 +147,17 @@ body {
 					margin: 10px 0;
 					flex-shrink: 0;
 				}
+
+				.label-list li {
+					margin: 0px 5px;
+					padding: 5px 15px;
+					border: 1px solid #7fb7e3;
+					border-radius: 5px;
+					display: inline-block;
+					background-color: #d4ecfc;
+					color: #163145;
+				}
 			}
-
-
 		}
 	}
 }

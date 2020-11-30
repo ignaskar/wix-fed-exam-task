@@ -1,5 +1,6 @@
 import React from 'react';
 import {Ticket} from "../api";
+import LabelList from "./LabelList";
 
 interface ITicketProps {
     ticket: Ticket;
@@ -13,6 +14,7 @@ const TicketListItem = ({ticket}: ITicketProps) => {
             <p className="ticket-content">{ticket.content}</p>
             <footer>
                 <div className='meta-data'>By {ticket.userEmail} | { new Date(ticket.creationTime).toLocaleString()}</div>
+                {ticket.labels ? <LabelList labels={ticket.labels} /> : null}
             </footer>
         </li>
     )
