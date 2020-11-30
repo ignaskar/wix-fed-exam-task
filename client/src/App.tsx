@@ -1,4 +1,6 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import Search from './components/Search';
+import TicketList from './components/TicketList';
 import './App.scss';
 import {createApiClient, Ticket} from './api';
 
@@ -9,62 +11,29 @@ export type AppState = {
 
 const api = createApiClient();
 
-export class App extends React.PureComponent<{}, AppState> {
+const App = () => {
 
-	state: AppState = {
-		search: ''
-	}
+	const [search, setSearch] = useState<string>('');
+	const [tickets, setTickets] = useState<Ticket[]>([]);
 
-	searchDebounce: any = null;
+	useEffect(() => {
+		const fetchTicketsAsync = async () => {
+			await api.getTickets()
+				.then(res => {
+					setTickets(res);
+				})
+		};
 
-	async componentDidMount() {
-		this.setState({
-			tickets: await api.getTickets()
-		});
-	}
+		fetchTicketsAsync();
+	}, [])
 
-	renderTickets = (tickets: Ticket[]) => {
-
-		const filteredTickets = tickets
-			.filter((t) => (t.title.toLowerCase() + t.content.toLowerCase()).includes(this.state.search.toLowerCase()));
-
-
-		return (<ul className='tickets'>
-			{filteredTickets.map((ticket) => (<li key={ticket.id} className='ticket'>
-				<h5 className='title'>{ticket.title}</h5>
-				<p className="ticket-content">
-					{ticket.content}
-				</p>
-				<footer>
-					<div className='meta-data'>By {ticket.userEmail} | { new Date(ticket.creationTime).toLocaleString()}</div>
-				</footer>
-			</li>))}
-		</ul>);
-	}
-
-	onSearch = async (val: string, newPage?: number) => {
-		
-		clearTimeout(this.searchDebounce);
-
-		this.searchDebounce = setTimeout(async () => {
-			this.setState({
-				search: val
-			});
-		}, 300);
-	}
-
-	render() {	
-		const {tickets} = this.state;
-
-		return (<main>
+	return(
+		<main>
 			<h1>Tickets List</h1>
-			<header>
-				<input type="search" placeholder="Search..." onChange={(e) => this.onSearch(e.target.value)}/>
-			</header>
-			{tickets ? <div className='results'>Showing {tickets.length} results</div> : null }	
-			{tickets ? this.renderTickets(tickets) : <h2>Loading..</h2>}
-		</main>)
-	}
+			<Search setSearch={setSearch} />
+			<TicketList tickets={tickets} search={search} />
+		</main>
+	)
 }
 
 export default App;

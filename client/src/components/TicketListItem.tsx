@@ -1,0 +1,21 @@
+import React from 'react';
+import {Ticket} from "../api";
+
+interface ITicketProps {
+    ticket: Ticket;
+}
+
+const TicketListItem = ({ticket}: ITicketProps) => {
+    return (
+        <li className="ticket">
+            <button className="btn btn-hide">hide</button>
+            <h5 className='title'>{ticket.title}</h5>
+            <p className="ticket-content">{ticket.content}</p>
+            <footer>
+                <div className='meta-data'>By {ticket.userEmail} | { new Date(ticket.creationTime).toLocaleString()}</div>
+            </footer>
+        </li>
+    )
+}
+
+export default TicketListItem;
