@@ -1,10 +1,21 @@
-import React from 'react';
+import React, {SetStateAction} from 'react';
 
 interface ISearchInterface {
-    onSearch: (val: string, newPage?: number) => Promise<void>
+    setSearch: React.Dispatch<SetStateAction<string>>
 }
 
-const Search = ({onSearch}: ISearchInterface) => {
+const Search = ({setSearch}: ISearchInterface) => {
+    let searchDebounce: any = null;
+
+    const onSearch = async (val: string, newPage?: number) => {
+
+        clearTimeout(searchDebounce);
+
+        searchDebounce = setTimeout(async () => {
+            setSearch(val);
+        }, 300);
+    }
+
     return (
         <header>
             <input type="search" placeholder="Search..." onChange={(e) => onSearch(e.target.value)}/>
