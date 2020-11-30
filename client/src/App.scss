@@ -57,6 +57,13 @@ body {
 		width: 3%;
 	}
 
+	.btn-show-more {
+		color: #3899ec;
+		background: none;
+		border: none;
+		margin: 10px 0;
+	}
+
 	.results, .hidden-results {
 		color: #7a92a5;
 		font-size: 12px;
@@ -65,7 +72,7 @@ body {
 
 	.hidden-results {
 		font-style: italic;
-		margin: 5px 0px;
+		margin: 5px 0;
 	}
 
 	header {
@@ -164,7 +171,7 @@ body {
 				}
 
 				.label-list li {
-					margin: 0px 5px;
+					margin: 0 5px;
 					padding: 5px 15px;
 					border: 1px solid #7fb7e3;
 					border-radius: 5px;
