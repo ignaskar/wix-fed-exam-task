@@ -12,7 +12,7 @@ export type Ticket = {
 interface IResponse {
     pageIndex: number;
     pageSize: number;
-    count: number
+    totalCount: number
     paginatedData: Ticket[];
 }
 

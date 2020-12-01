@@ -19,7 +19,7 @@ const App = () => {
         const fetchTicketsAsync = async () => {
             await api.getTickets({ page: pageIndex, search: search }).then((res) => {
                 setTickets(res.paginatedData);
-                setTotalTicketCount(res.count);
+                setTotalTicketCount(res.totalCount);
                 setPageSize(res.pageSize);
             });
         };

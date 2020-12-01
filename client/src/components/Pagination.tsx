@@ -33,7 +33,7 @@ const Pagination = ({ tickets, totalTicketCount, pageIndex, setPageIndex, pageSi
         }
     };
 
-    const handleInputChange = (e: any) => {
+    const handlePageIndexChange = (e: any) => {
         setPageIndex(parseInt(e.target.value));
     };
 
@@ -41,16 +41,16 @@ const Pagination = ({ tickets, totalTicketCount, pageIndex, setPageIndex, pageSi
     return (
         <div>
             <div className="pagination">
-                <button className="btn" onClick={() => handlePreviousPage(pageIndex)}>Previous Page</button>
+                <button className="btn ripple" onClick={() => handlePreviousPage(pageIndex)}>Previous Page</button>
                 <div className="pagination-control">
-                    <label>Page</label>
-                   <select value={pageIndex} onChange={(e) => handleInputChange(e)}>
+                   <label>Page</label>
+                   <select value={pageIndex} onChange={(e) => handlePageIndexChange(e)}>
                         {pageArray.map(pn => (
                             <option key={uuidv4()}>{pn + 1}</option>
                         ))}
                     </select>
                 </div>
-                <button className="btn" onClick={() => handleNextPage(pageIndex)}>Next Page</button>
+                <button className="btn ripple" onClick={() => handleNextPage(pageIndex)}>Next Page</button>
             </div>
         </div>
 

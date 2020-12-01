@@ -64,6 +64,21 @@ body {
     margin: 10px 0;
   }
 
+  .ripple {
+    background-position: center;
+    transition: background .8s;
+
+    &:hover {
+      background: #d2d3d4 radial-gradient(circle, transparent 1%, #d2d3d4 1%) center / 15000%;
+    }
+
+    &:active {
+      background-color: #e3e3e3;
+      background-size: 100%;
+      transition: background 0s;
+    }
+  }
+
   .results, .hidden-results {
     color: #7a92a5;
     font-size: 12px;
