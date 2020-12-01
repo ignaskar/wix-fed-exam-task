@@ -27,7 +27,7 @@ app.get('/api/tickets', (req, res) => {
 
     const searchPattern = search.match(re);
     if (searchPattern) {
-        const f = searchPattern.forEach((str: string) => {
+        searchPattern.forEach((str: string) => {
             const searchParts = str.split(':');
 
             switch (searchParts[0]) {
