@@ -7,9 +7,11 @@ interface ITicketProps {
     ticket: Ticket;
     idsToHide: string[];
     setIdsToHide: React.Dispatch<SetStateAction<string[]>>;
+    pageIndex: number;
+    setPageIndex: React.Dispatch<SetStateAction<number>>;
 }
 
-const TicketListItem = ({ ticket, idsToHide, setIdsToHide }: ITicketProps) => {
+const TicketListItem = ({ ticket, idsToHide, setIdsToHide, pageIndex, setPageIndex }: ITicketProps) => {
 
     const [truncated, setTruncated] = useState<boolean>(false);
     const [expanded, setExpanded] = useState<boolean>(false);
@@ -54,7 +56,8 @@ const TicketListItem = ({ ticket, idsToHide, setIdsToHide }: ITicketProps) => {
             </p>
             <footer>
                 <div
-                    className="meta-data">By {ticket.userEmail} | {new Date(ticket.creationTime).toLocaleString()}</div>
+                    className="meta-data">By {ticket.userEmail} | {new Date(ticket.creationTime).toLocaleString()}
+                </div>
                 {ticket.labels ? <LabelList labels={ticket.labels} /> : null}
             </footer>
         </li>

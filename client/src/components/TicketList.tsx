@@ -4,12 +4,16 @@ import TicketListItem from './TicketListItem';
 
 interface ITicketListProps {
     tickets: Ticket[];
+    totalTicketCount: number;
     search: string;
     idsToHide: string[];
     setIdsToHide: React.Dispatch<SetStateAction<string[]>>;
+    pageIndex: number;
+    setPageIndex: React.Dispatch<SetStateAction<number>>;
 }
 
-const TicketList = ({ tickets, idsToHide, setIdsToHide }: ITicketListProps) => {
+const TicketList = ({ tickets, totalTicketCount, idsToHide, setIdsToHide, pageIndex, setPageIndex }: ITicketListProps) => {
+
     const filteredTickets = tickets.filter((t) => !idsToHide.includes(t.id));
     let statusMessage: JSX.Element;
 
@@ -53,7 +57,7 @@ const TicketList = ({ tickets, idsToHide, setIdsToHide }: ITicketListProps) => {
         <div>
             {tickets ? (
                 <div className="results">
-                    Showing {tickets.length} results {statusMessage}
+                    Showing {tickets.length} results out of {totalTicketCount} {statusMessage}
                 </div>
             ) : null}
             <ul className="tickets">
@@ -63,6 +67,8 @@ const TicketList = ({ tickets, idsToHide, setIdsToHide }: ITicketListProps) => {
                         ticket={ticket}
                         idsToHide={idsToHide}
                         setIdsToHide={setIdsToHide}
+                        pageIndex={pageIndex}
+                        setPageIndex={setPageIndex}
                     />
                 ))}
             </ul>

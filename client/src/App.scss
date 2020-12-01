@@ -75,6 +75,29 @@ body {
     margin: 5px 0;
   }
 
+  .pagination {
+    width: 100%;
+    margin: 15px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    .pagination-control {
+      margin: 5px;
+      text-align: right;
+      justify-content: center;
+
+      select {
+        flex-shrink: 0;
+        border-radius: 6px;
+        background-color: #fff;
+        box-shadow: 0 2px 6px 1px #e1e5e8;
+        margin-bottom: 14px;
+        border: 1px solid #fff;
+      }
+    }
+  }
+
   header {
     width: 100%;
     flex-shrink: 0;

@@ -1403,5 +1403,12 @@
         "content": "hello Friends,\nCan anyone please help me in creating a search bar for my wix store page. So my customers could search any particular product from my wix store.\nThank you",
         "userEmail": "sasi@ezougu.net",
         "creationTime": 1535854919274
+    },
+    {
+        "id": "c6d0f8f3-5e3a-de0b-84d6-f9e6a8cb0bc5",
+        "title": "This is a test ticket",
+        "content": "to test pagination component",
+        "userEmail": "test@testy.net",
+        "creationTime": 1518048321423
     }
 ]

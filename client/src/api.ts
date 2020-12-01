@@ -10,7 +10,10 @@ export type Ticket = {
 };
 
 interface IResponse {
-    data: Ticket[];
+    pageIndex: number;
+    pageSize: number;
+    count: number
+    paginatedData: Ticket[];
 }
 
 interface IParameters {
@@ -27,7 +30,7 @@ export const createApiClient = (): ApiClient => {
         getTickets: (params) => {
             return axios
                 .get(`http://localhost:3232/api/tickets`, { params: params })
-                .then((res) => res);
+                .then((res) => res.data);
         },
     };
 };
