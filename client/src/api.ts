@@ -9,16 +9,25 @@ export type Ticket = {
     labels?: string[];
 };
 
+interface IResponse {
+    data: Ticket[];
+}
+
+interface IParameters {
+    page: number;
+    search: string;
+}
+
 export type ApiClient = {
-    getTickets: () => Promise<Ticket[]>;
+    getTickets: (params: IParameters) => Promise<IResponse>;
 };
 
 export const createApiClient = (): ApiClient => {
     return {
-        getTickets: () => {
+        getTickets: (params) => {
             return axios
-                .get(`http://localhost:3232/api/tickets`)
-                .then((res) => res.data);
+                .get(`http://localhost:3232/api/tickets`, { params: params })
+                .then((res) => res);
         },
     };
 };

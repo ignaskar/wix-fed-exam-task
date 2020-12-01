@@ -9,11 +9,7 @@ interface ITicketListProps {
     setIdsToHide: React.Dispatch<SetStateAction<string[]>>;
 }
 
-const TicketList = ({
-                        tickets,
-                        idsToHide,
-                        setIdsToHide,
-                    }: ITicketListProps) => {
+const TicketList = ({ tickets, idsToHide, setIdsToHide }: ITicketListProps) => {
     const filteredTickets = tickets.filter((t) => !idsToHide.includes(t.id));
     let statusMessage: JSX.Element;
 
@@ -29,7 +25,10 @@ const TicketList = ({
             statusMessage = (
                 <div className="hidden-results">
                     1 hidden ticket -{' '}
-                    <button onClick={() => onRestore()} className="btn btn-restore">
+                    <button
+                        onClick={() => onRestore()}
+                        className="btn btn-restore"
+                    >
                         restore
                     </button>
                 </div>
@@ -39,7 +38,10 @@ const TicketList = ({
             statusMessage = (
                 <div className="hidden-results">
                     {idsToHide.length} hidden tickets -{' '}
-                    <button onClick={() => onRestore()} className="btn btn-restore">
+                    <button
+                        onClick={() => onRestore()}
+                        className="btn btn-restore"
+                    >
                         restore
                     </button>
                 </div>
