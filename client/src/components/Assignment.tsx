@@ -39,7 +39,7 @@ const Assignment = ({ticket, employees}: IAssignmentProps) => {
                     <option key={e.id} value={e.id}>{`${e.firstName} ${e.lastName}`}</option>
                 ))}
             </select>
-            <button className="btn" onClick={() => handleAssigneeRemoval(ticket)}>remove assignee</button>
+            <button className="btn ripple" onClick={() => handleAssigneeRemoval(ticket)}>remove assignee</button>
         </div>
     )
 }

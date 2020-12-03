@@ -47,25 +47,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9506d16d-6377-4432-a8dc-29c0915c2202" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Assignment.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/Dtos/EmployeeDto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/employee_data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Search.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/TicketList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/TicketList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/TicketListItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/TicketListItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/temp-data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/temp-data.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Assignment.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Assignment.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,8 +94,16 @@
       <workItem from="1606919327420" duration="610000" />
       <workItem from="1606920110266" duration="1410000" />
       <workItem from="1606922922996" duration="4281000" />
-      <workItem from="1606933112825" duration="18649000" />
+      <workItem from="1606933112825" duration="18891000" />
     </task>
+    <task id="LOCAL-00001" summary="part 3 - assign ticket to employee/search by Label + part 2c search fix">
+      <created>1606994436290</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1606994436290</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,6 +120,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="part 3 - assign ticket to employee/search by Label + part 2c search fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="part 3 - assign ticket to employee/search by Label + part 2c search fix" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2535" y="-557" width="1073" height="708" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606920161320">
@@ -203,6 +198,10 @@
       <screen x="1792" y="-922" width="2560" height="1415" />
     </state>
     <state x="2580" y="-579" key="SettingsEditor/1792.-922.2560.1415/0.25.1792.1095@1792.-922.2560.1415" timestamp="1606921526609" />
+    <state x="2671" y="-481" key="Vcs.Push.Dialog.v2" timestamp="1606994438748">
+      <screen x="1792" y="-922" width="2560" height="1415" />
+    </state>
+    <state x="2671" y="-481" key="Vcs.Push.Dialog.v2/1792.-922.2560.1415/0.25.1792.1095@1792.-922.2560.1415" timestamp="1606994438748" />
     <state x="2735" y="-600" width="672" height="678" key="search.everywhere.popup" timestamp="1606941518293">
       <screen x="1792" y="-922" width="2560" height="1415" />
     </state>
