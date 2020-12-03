@@ -47,8 +47,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9506d16d-6377-4432-a8dc-29c0915c2202" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Assignment.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Assignment.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +79,7 @@
     <property name="nodejs.mocha.mocha_node_package_dir" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="settings.typescriptcompiler" />
-    <property name="ts.external.directory.path" value="$PROJECT_DIR$/server/node_modules/typescript/lib" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -95,6 +94,7 @@
       <workItem from="1606920110266" duration="1410000" />
       <workItem from="1606922922996" duration="4281000" />
       <workItem from="1606933112825" duration="18891000" />
+      <workItem from="1607019796669" duration="214000" />
     </task>
     <task id="LOCAL-00001" summary="part 3 - assign ticket to employee/search by Label + part 2c search fix">
       <created>1606994436290</created>
@@ -130,22 +130,22 @@
       <screen x="1792" y="-922" width="2560" height="1415" />
     </state>
     <state x="2535" y="-557" width="1073" height="708" key="#com.intellij.execution.impl.EditConfigurationsDialog/1792.-922.2560.1415/0.25.1792.1095@1792.-922.2560.1415" timestamp="1606920161320" />
-    <state width="2537" height="498" key="GridCell.Tab.0.bottom" timestamp="1606919921325">
+    <state width="2537" height="405" key="GridCell.Tab.0.bottom" timestamp="1607019962981">
       <screen x="1792" y="-922" width="2560" height="1415" />
     </state>
-    <state width="2537" height="498" key="GridCell.Tab.0.bottom/1792.-922.2560.1415/0.25.1792.1095@1792.-922.2560.1415" timestamp="1606919921325" />
-    <state width="2537" height="498" key="GridCell.Tab.0.center" timestamp="1606919921324">
+    <state width="2537" height="405" key="GridCell.Tab.0.bottom/1792.-922.2560.1415/0.25.1792.1095@1792.-922.2560.1415" timestamp="1607019962981" />
+    <state width="2537" height="405" key="GridCell.Tab.0.center" timestamp="1607019962980">
       <screen x="1792" y="-922" width="2560" height="1415" />
     </state>
-    <state width="2537" height="498" key="GridCell.Tab.0.center/1792.-922.2560.1415/0.25.1792.1095@1792.-922.2560.1415" timestamp="1606919921324" />
-    <state width="2537" height="498" key="GridCell.Tab.0.left" timestamp="1606919921324">
+    <state width="2537" height="405" key="GridCell.Tab.0.center/1792.-922.2560.1415/0.25.1792.1095@1792.-922.2560.1415" timestamp="1607019962980" />
+    <state width="2537" height="405" key="GridCell.Tab.0.left" timestamp="1607019962979">
       <screen x="1792" y="-922" width="2560" height="1415" />
     </state>
-    <state width="2537" height="498" key="GridCell.Tab.0.left/1792.-922.2560.1415/0.25.1792.1095@1792.-922.2560.1415" timestamp="1606919921324" />
-    <state width="2537" height="498" key="GridCell.Tab.0.right" timestamp="1606919921325">
+    <state width="2537" height="405" key="GridCell.Tab.0.left/1792.-922.2560.1415/0.25.1792.1095@1792.-922.2560.1415" timestamp="1607019962979" />
+    <state width="2537" height="405" key="GridCell.Tab.0.right" timestamp="1607019962980">
       <screen x="1792" y="-922" width="2560" height="1415" />
     </state>
-    <state width="2537" height="498" key="GridCell.Tab.0.right/1792.-922.2560.1415/0.25.1792.1095@1792.-922.2560.1415" timestamp="1606919921325" />
+    <state width="2537" height="405" key="GridCell.Tab.0.right/1792.-922.2560.1415/0.25.1792.1095@1792.-922.2560.1415" timestamp="1607019962980" />
     <state width="2537" height="498" key="GridCell.Tab.1.bottom" timestamp="1606919921326">
       <screen x="1792" y="-922" width="2560" height="1415" />
     </state>

@@ -94,9 +94,6 @@ app.patch('/api/tickets/:id', (req, res) => {
     const assignTicket = (assigneeId: string): Promise<string> => {
         return new Promise((resolve, reject) => {
             const ticketToUpdate = tempData.find(ticket => ticket.id === id);
-            console.log(verifyAssigneeId(assigneeId))
-            console.log(typeof assigneeId)
-            console.log(assigneeId)
 
             if (ticketToUpdate !== undefined && verifyAssigneeId(assigneeId)) {
                 ticketToUpdate.assignee = assigneeId;
