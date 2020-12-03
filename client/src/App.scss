@@ -113,6 +113,8 @@ body {
     }
   }
 
+
+
   header {
     width: 100%;
     flex-shrink: 0;
@@ -209,13 +211,33 @@ body {
         }
 
         .label-list li {
-          margin: 0 5px;
+          margin: 5px 5px;
           padding: 5px 15px;
           border: 1px solid #7fb7e3;
           border-radius: 5px;
           display: inline-block;
           background-color: #d4ecfc;
           color: #163145;
+        }
+
+        .assignment-module {
+          font-size: .9rem;
+          font-style: normal;
+          font-weight: 500;
+          width: 50%;
+          position: relative;
+
+          select {
+            margin-right: 5px;
+            border: 1px solid black;
+            border-radius: 0.25em;
+            padding: 0.25em 0.5em;
+            font-size: 1.1rem;
+            cursor: pointer;
+            line-height: 1.1;
+            background-color: #fff;
+            background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+          }
         }
       }
     }

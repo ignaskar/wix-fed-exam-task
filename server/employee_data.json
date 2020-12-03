@@ -1,0 +1,38 @@
+[
+  {
+    "id": "Unassigned",
+    "firstName": "Assign To...",
+    "lastName": "",
+    "email": ""
+  },
+  {
+    "id": "23ed629d-f40f-4c14-96d8-c53163c283cc",
+    "firstName": "Ignas",
+    "lastName": "Karpusenkovas",
+    "email": "ignas.karpusenkovas@gmail.com"
+  },
+  {
+    "id": "acf17d3f-d4f8-4486-b03f-eeefd8a0c860",
+    "firstName": "Tim",
+    "lastName": "Cook",
+    "email": "tim.cook@apple.com"
+  },
+  {
+    "id": "796ad405-f18a-484e-8c0c-3fde0ad13bff",
+    "firstName": "Bill",
+    "lastName": "Gates",
+    "email": "bill.gates@microsoft.com"
+  },
+  {
+    "id": "7cfbfa1c-9a81-4f87-ace8-13115237118e",
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "john.doe@aol.net"
+  },
+  {
+    "id": "e396f75f-aae7-4ef2-892a-da6de7dd94dd",
+    "firstName": "Mark",
+    "lastName": "Zuckerberg",
+    "email": "mark.zuckerberg@facebook.com"
+  }
+]

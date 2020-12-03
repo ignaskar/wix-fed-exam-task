@@ -1,18 +1,22 @@
-import React, { SetStateAction } from 'react';
-import { Ticket } from '../api';
+import React, {SetStateAction, useState} from 'react';
+import {Employee, Ticket} from '../api';
 import TicketListItem from './TicketListItem';
 
 interface ITicketListProps {
     tickets: Ticket[];
     totalTicketCount: number;
+    employees: Employee[];
     search: string;
     idsToHide: string[];
     setIdsToHide: React.Dispatch<SetStateAction<string[]>>;
-    pageIndex: number;
-    setPageIndex: React.Dispatch<SetStateAction<number>>;
 }
 
-const TicketList = ({ tickets, totalTicketCount, idsToHide, setIdsToHide, pageIndex, setPageIndex }: ITicketListProps) => {
+export type Options = {
+    value: string,
+    label: string;
+}
+
+const TicketList = ({ tickets, totalTicketCount, employees, idsToHide, setIdsToHide }: ITicketListProps) => {
 
     const filteredTickets = tickets.filter((t) => !idsToHide.includes(t.id));
     let statusMessage: JSX.Element;
@@ -65,10 +69,9 @@ const TicketList = ({ tickets, totalTicketCount, idsToHide, setIdsToHide, pageIn
                     <TicketListItem
                         key={ticket.id}
                         ticket={ticket}
+                        employees={employees}
                         idsToHide={idsToHide}
                         setIdsToHide={setIdsToHide}
-                        pageIndex={pageIndex}
-                        setPageIndex={setPageIndex}
                     />
                 ))}
             </ul>

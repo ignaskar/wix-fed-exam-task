@@ -1,17 +1,17 @@
-import React, { SetStateAction, useState } from 'react';
-import { Ticket } from '../api';
+import React, {SetStateAction, useState} from 'react';
+import {Employee, Ticket} from '../api';
 import LabelList from './LabelList';
 import Truncate from 'react-truncate';
+import Assignment from "./Assignment";
 
 interface ITicketProps {
     ticket: Ticket;
+    employees: Employee[];
     idsToHide: string[];
     setIdsToHide: React.Dispatch<SetStateAction<string[]>>;
-    pageIndex: number;
-    setPageIndex: React.Dispatch<SetStateAction<number>>;
 }
 
-const TicketListItem = ({ ticket, idsToHide, setIdsToHide, pageIndex, setPageIndex }: ITicketProps) => {
+const TicketListItem = ({ ticket, employees, idsToHide, setIdsToHide}: ITicketProps) => {
 
     const [truncated, setTruncated] = useState<boolean>(false);
     const [expanded, setExpanded] = useState<boolean>(false);
@@ -59,6 +59,8 @@ const TicketListItem = ({ ticket, idsToHide, setIdsToHide, pageIndex, setPageInd
                     className="meta-data">By {ticket.userEmail} | {new Date(ticket.creationTime).toLocaleString()}
                 </div>
                 {ticket.labels ? <LabelList labels={ticket.labels} /> : null}
+
+                <Assignment ticket={ticket} employees={employees} />
             </footer>
         </li>
     );

@@ -7,22 +7,31 @@ export type Ticket = {
     creationTime: number;
     userEmail: string;
     labels?: string[];
+    assignee?: string;
 };
 
-interface IResponse {
+export type Employee = {
+    id: string,
+    firstName: string,
+    lastName: string,
+    email: string;
+}
+
+interface IGetResponse<T> {
     pageIndex: number;
     pageSize: number;
     totalCount: number
-    paginatedData: Ticket[];
+    paginatedData: Array<T>;
 }
 
-interface IParameters {
+interface IGetTicketsParameters {
     page: number;
     search: string;
 }
 
 export type ApiClient = {
-    getTickets: (params: IParameters) => Promise<IResponse>;
+    getTickets: (params: IGetTicketsParameters) => Promise<IGetResponse<Ticket>>;
+    getEmployees: () => Promise<IGetResponse<Employee>>;
 };
 
 export const createApiClient = (): ApiClient => {
@@ -32,5 +41,11 @@ export const createApiClient = (): ApiClient => {
                 .get(`http://localhost:3232/api/tickets`, { params: params })
                 .then((res) => res.data);
         },
+
+        getEmployees: () => {
+            return axios
+                .get(`http://localhost:3232/api/employees`)
+                .then(res => res.data);
+        }
     };
 };
